@@ -49,7 +49,7 @@ server.js
 
 ### 1️⃣ Clone Repository
 
-git clone <your-repo-url>
+git clone https://github.com/Preethampoojari/game-matching-quiz-api.git
 
 cd game-quiz-api
 
