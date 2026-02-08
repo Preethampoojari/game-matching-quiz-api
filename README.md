@@ -186,7 +186,7 @@ Free Render instance may take 30-50 seconds to wake up after inactivity.
 
 🎯 Player Matchmaking — Player 2 (Match Found)
 
-![Player 2 Match Found](docs/images/Player-1-Matchmaking-matchfound.png)
+![Player 2 Match Found](docs/images/Player-2-Matchmaking-match-found.png)
 
 🎯 Sending Quiz Questions to Players
 
