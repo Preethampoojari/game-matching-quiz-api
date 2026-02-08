@@ -140,7 +140,8 @@ Winner is decided based on:
 
 ## 🌐 Deployment
 
-(If deployed, add link here)
+## Live API
+https://game-matching-quiz-api.onrender.com
 
 ---
 
