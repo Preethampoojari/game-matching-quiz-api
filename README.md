@@ -51,7 +51,7 @@ server.js
 
 git clone https://github.com/Preethampoojari/game-matching-quiz-api.git
 
-cd game-quiz-api
+cd game-matching-quiz-api
 
 
 ---
@@ -140,8 +140,13 @@ Winner is decided based on:
 
 ## 🌐 Deployment
 
-## Live API
-https://game-matching-quiz-api.onrender.com
+Backend deployed using **Render**
+
+Live API:
+👉 https://game-matching-quiz-api.onrender.com
+
+Note:
+Free Render instance may take 30-50 seconds to wake up after inactivity.
 
 ---
 
