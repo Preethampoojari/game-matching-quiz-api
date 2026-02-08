@@ -149,16 +149,122 @@ You can test all APIs using the Postman collection below:
 
 ---
 
-## 🧪 API Testing Flow
+## 📝 Important Notes For API Usage
 
-Follow this order while testing APIs:
+---
 
-1️⃣ POST /api/matchmaking → Player 1  
-2️⃣ POST /api/matchmaking → Player 2  
-3️⃣ POST /api/quiz/start  
-4️⃣ POST /api/quiz/submit → Player 1  
-5️⃣ POST /api/quiz/submit → Player 2  
-6️⃣ GET /api/quiz/result/:sessionId
+### 🎯 Matchmaking (`POST /api/matchmaking`)
+
+Used to register a player and find opponent.
+
+#### Request Body
+```json
+{
+  "name": "Player Name",
+  "level": "beginner | intermediate | advanced"
+}
+```
+
+👉 First player will be placed in waiting state
+👉 Second player will automatically create a quiz session
+
+
+## 🎯 Start Quiz (POST /api/quiz/start)
+
+Used to generate quiz questions for both players.
+
+Request Body
+
+```json
+{
+  "sessionId": "quiz_session_id"
+}
+```
+
+👉 This endpoint:
+
+Generates random questions
+
+Assigns same question set to both players
+
+Starts the quiz session
+
+
+## 🎯 Submit Answers (POST /api/quiz/submit)
+
+Used by each player to submit quiz answers.
+
+Request Body
+
+```json
+{
+  "sessionId": "quiz_session_id",
+  "playerId": "player_id",
+  "answers": {
+    "questionId": "selected_option"
+  }
+}
+```
+
+✅ Answers Object Format
+
+answers must be an object
+
+Key = Question ID
+
+Value = Selected Answer
+
+Example
+```json
+{
+  "answers": {
+    "6986826166afd788437f8935": "===",
+    "6986826166afd788437f8932": "Programming Language"
+  }
+}
+```
+
+👉 Important Rules:
+
+Player can submit answers only once
+
+Duplicate submission is blocked
+
+Answers must match valid question IDs
+
+
+## 🎯 Get Quiz Result (GET /api/quiz/result/:sessionId)
+
+Returns final score and winner.
+
+Both players must submit answers before result is available.
+
+Example
+
+```
+GET /api/quiz/result/SESSION_ID
+```
+
+## 🧠 Winner Logic
+
+Winner is decided based on:
+
+- 1️⃣ Highest correct answers
+- 2️⃣ If tie → Player who submitted answers first
+- 3️⃣ If both equal → Match Draw
+
+
+## ⚠️ General Testing Flow
+
+Always follow this order while testing APIs:
+
+1. POST /api/matchmaking → Player 1
+2. POST /api/matchmaking → Player 2
+3. POST /api/quiz/start → sessionId required
+4. POST /api/quiz/submit → Player 1
+5. POST /api/quiz/submit → Player 2
+6. GET /api/quiz/result/:sessionId
+
 
 
 ---
