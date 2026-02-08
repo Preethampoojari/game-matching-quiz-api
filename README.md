@@ -177,6 +177,30 @@ Free Render instance may take 30-50 seconds to wake up after inactivity.
 ---
 
 
+## 🧪 API Testing Proof (Postman)
+
+🎯 Player Matchmaking — Player 1 (Waiting State)
+
+![Player 1 Waiting](docs/images/Player-1-Matchmaking-(waiting).png)
+
+
+🎯 Player Matchmaking — Player 2 (Match Found)
+
+🎯 Sending Quiz Questions to Players
+
+🎯 Player 1 Answer Submission
+
+🎯 Player 2 Answer Submission
+
+🚫 Duplicate Submission Prevention
+
+🏆 Winner Determination
+
+
+
+---
+
+
 
 ## 👨‍💻 Author
 
