@@ -165,6 +165,10 @@ Follow this order while testing APIs:
 6️⃣ GET /api/quiz/result/:sessionId
 
 
+👉 Note: For POST /api/quiz/start, you must send a valid sessionId to generate quiz questions and start the quiz for both players.
+
+👉 Note: While submitting answers using POST /api/quiz/submit, you must send sessionId, playerId, and an answers object where each key is a questionId and its value is the selected answer (e.g., "6986826166afd788437f8935": "===").
+
 ---
 
 
