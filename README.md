@@ -181,7 +181,7 @@ Free Render instance may take 30-50 seconds to wake up after inactivity.
 
 🎯 Player Matchmaking — Player 1 (Waiting State)
 
-![Player 1 Waiting](docs/images/Player-1-Matchmaking-(waiting).png)
+![Player 1 Waiting](docs/images/Player-1-Matchmaking-waiting.png)
 
 
 🎯 Player Matchmaking — Player 2 (Match Found)
@@ -195,6 +195,8 @@ Free Render instance may take 30-50 seconds to wake up after inactivity.
 🚫 Duplicate Submission Prevention
 
 🏆 Winner Determination
+
+![Player 1 Waiting](docs/images/Get-Winner.png)
 
 
 
