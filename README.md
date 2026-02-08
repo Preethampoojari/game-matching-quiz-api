@@ -134,9 +134,35 @@ Winner is decided based on:
 
 ## 📮 Postman Collection
 
-(Attach your Postman collection JSON here)
+You can test all APIs using the Postman collection below:
+
+👉 [Download Postman Collection](./game-quiz-api.postman_collection.json)
+
+### How to Use
+1. Import this JSON file into Postman
+2. Run APIs in the following order:
+
+   - Player Matchmaking
+   - Start Quiz Session
+   - Submit Player Answers
+   - Get Result
 
 ---
+
+## 🧪 API Testing Flow
+
+Follow this order while testing APIs:
+
+1️⃣ POST /api/matchmaking → Player 1  
+2️⃣ POST /api/matchmaking → Player 2  
+3️⃣ POST /api/quiz/start  
+4️⃣ POST /api/quiz/submit → Player 1  
+5️⃣ POST /api/quiz/submit → Player 2  
+6️⃣ GET /api/quiz/result/:sessionId
+
+
+---
+
 
 ## 🌐 Deployment
 
