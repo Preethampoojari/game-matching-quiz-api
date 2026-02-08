@@ -1,0 +1,188 @@
+{
+  "info": {
+    "_postman_id": "e3df0e16-837d-4b22-aaf6-f348706fedd1",
+    "name": "Game Quiz App API Test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49286271",
+    "_collection_link": "https://go.postman.co/collection/49286271-e3df0e16-837d-4b22-aaf6-f348706fedd1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Player 1",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Preetham\",\r\n  \"level\": \"beginner\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/matchmaking",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "matchmaking"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Player 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Shubham\",\r\n  \"level\": \"beginner\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/matchmaking",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "matchmaking"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Send 10 questions to players",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sessionId\": \"dfd65102-47aa-4ba1-9ba4-2c9c9f5b56e7\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/quiz/start",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "quiz",
+            "start"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Player 1 Submit Ans",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sessionId\": \"dfd65102-47aa-4ba1-9ba4-2c9c9f5b56e7\",\r\n  \"playerId\": \"6987a72c65299c1b9c07bf64\",\r\n  \"answers\": {\r\n    \"6986826166afd788437f8935\": \"===\",\r\n    \"6986826166afd788437f892d\": \"Programming Language\",\r\n    \"6986826166afd788437f893e\": \"join()\",\r\n    \"6986826166afd788437f8939\": \"break\",\r\n    \"6986826166afd788437f8930\": \"All\",\r\n    \"6986826166afd788437f8936\": \"do...while\",\r\n    \"6986826166afd788437f893b\": \"object\",\r\n    \"6986826166afd788437f8932\": \"String\",\r\n    \"6986826166afd788437f893c\": \"Number()\",\r\n    \"6986826166afd788437f8938\": \"pop()\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/quiz/submit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "quiz",
+            "submit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Player 2 Submit Ans",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sessionId\": \"dfd65102-47aa-4ba1-9ba4-2c9c9f5b56e7\",\r\n  \"playerId\": \"6987a74f65299c1b9c07bf66\",\r\n  \"answers\": {\r\n    \"6986826166afd788437f8935\": \"===\",\r\n    \"6986826166afd788437f892d\": \"Programming Language\",\r\n    \"6986826166afd788437f893e\": \"join()\",\r\n    \"6986826166afd788437f8939\": \"break\",\r\n    \"6986826166afd788437f8930\": \"All\",\r\n    \"6986826166afd788437f8936\": \"do...while\",\r\n    \"6986826166afd788437f893b\": \"object\",\r\n    \"6986826166afd788437f8932\": \"String\",\r\n    \"6986826166afd788437f893c\": \"Number()\",\r\n    \"6986826166afd788437f8938\": \"pop()\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/quiz/submit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "quiz",
+            "submit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Winner",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sessionId\": \"3594918c-d5ed-40a9-b1ea-d7ac44e6ea8e\",\r\n  \"playerId\": \"6987718ec164d3458197da00\",\r\n  \"answers\": {\r\n    \"6986826166afd788437f892f\": \"//\",\r\n    \"6986826166afd788437f8931\": \"console.log()\",\r\n    \"6986826166afd788437f8935\": \"===\",\r\n    \"6986826166afd788437f8939\": \"break\",\r\n    \"6986826166afd788437f8933\": \"Number\",\r\n    \"6986826166afd788437f893e\": \"join()\",\r\n    \"6986826166afd788437f8934\": \"def\",\r\n    \"6986826166afd788437f8937\": \"push()\",\r\n    \"6986826166afd788437f8936\": \"do...while\",\r\n    \"6986826166afd788437f8940\": \"if\"\r\n  }\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/quiz/result/dfd65102-47aa-4ba1-9ba4-2c9c9f5b56e7",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "quiz",
+            "result",
+            "dfd65102-47aa-4ba1-9ba4-2c9c9f5b56e7"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
